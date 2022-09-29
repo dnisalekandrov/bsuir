@@ -1,0 +1,25 @@
+#include <locale.h>
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    char summer[100] = "Лето"; //значения названий пор года, с которыми будет происходить сравнение
+    char winter[100] = "Зима";
+    char spring[100] = "Весна";
+    char autumn[100] = "Осень";
+    char year[100];
+    scanf("%s", year);
+    if (strcmp(summer, year) == 0)  //сравенение введённого текста с названием поры года
+        printf("Июнь, июль, август \n");
+    else if (strcmp(winter, year) == 0)
+        printf("Декабрь, январь, февраль \n");
+    else if (strcmp(spring, year) == 0)
+        printf("Март, апрель, май \n");
+    else if (strcmp(autumn, year) == 0)
+        printf("Сентябрь, октябрь, ноябрь \n");
+    else
+        printf("Вы ввели не время года \n");
+}
