@@ -1,0 +1,39 @@
+#include <locale.h>
+#include <math.h>
+#include <stdio.h>
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+    char x[100];
+    char y[100];
+    char z[100];
+    char dot[100] = ".";
+    int a;
+    int b;
+    int c;
+    printf("Введите a, b, c:  \n");
+    scanf("%s%s%s", x, y, z);
+    for (int i = 0; i < 100; i++)
+    {
+        if (x[i] == dot[0])
+            a = 1;
+    }
+    for (int i = 0; i < 100; i++)
+    {
+        if (y[i] == dot[0])
+            b = 1;
+    }
+    for (int i = 0; i < 100; i++)
+    {
+        if (z[i] == dot[0])
+            c = 1;
+    }
+    printf("Целыми являются \n");
+    if (a == 0)
+        printf("a \n");
+    if (b == 0)
+        printf("b \n");
+    if (c == 0)
+        printf("c \n");
+}
