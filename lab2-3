@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+
+int main() {
+	setlocale(LC_ALL, "Rus");
+	printf("Введите 2 числа: \n");
+	int a, b;
+	scanf_s("%d%d", &a, &b);
+	for (int cnt = 1; a != b; cnt++) {
+		if (a > b)
+		{
+			a = a - b;
+		}
+		else
+		{
+			b = b - a;
+		}
+	}
+	printf("НОД этих чисел: %d", a);
+}
