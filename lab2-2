@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+int main() {
+    float pi = 1, num = 3;
+    for (int i = 0; i < 500; i++)
+    {
+        if (i % 2 == 0) {
+            pi = pi - (1 / num);
+        }
+        else {
+            pi = pi + (1 / num);
+        }
+        num = num+2;
+    }
+    printf_s("%f", 4 * pi);
+}
