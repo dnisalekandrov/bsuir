@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+
+int main()
+{
+    setlocale(LC_ALL, "rus");
+    printf("Введите число n: ");
+    int n, c;
+    scanf_s("%d", &n);
+    float i = 1 / (float)n;
+    float one = 1;
+    c = 0;
+    for (int cnt = 1; one <= 3; cnt++)
+    {
+        one = one + (1 / (float)n);
+        c = c + 1;
+    }
+    printf("%d \n", c - 1);
+}
